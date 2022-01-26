@@ -1,0 +1,59 @@
+<script>
+
+/* let myPromise = new Promise ((resolve)=>{
+    setTimeout(() => alert('Привет'), 3000)
+    resolve() 
+})
+
+myPromise.then(( ) => {
+console.log("myPromise зарезолвился, и я узнал об этом");
+})
+ */
+
+/* let myPromise = new Promise((resolve) => {
+        let number = Math.random()
+        resolve(number)
+    })
+
+    myPromise.then((number) => {
+        console.log("myPromise зарезолвился, и я узнал об этом: " + number)
+    })
+
+    myPromise.then((number) => {
+        console.log("myPromise зарезолвился, и я узнал об этом: " + number)
+    })
+ */
+
+    let doAfter = (sec) => {
+        let promise1 = new Promise((resolve) => {
+            setTimeout(resolve(), sec * 1000)
+        })
+        return promise1
+    }
+/* 
+    let pr5 = doAfter(5);
+    let pr3 = doAfter(3);
+    let pr10 = doAfter(10);
+
+    pr5.then(() => console.log('я сработал через 5 секунд'));
+    pr3.then(() => console.log('а я сработал через 3 секунд'));
+    pr10.then( () => console.log('я сработал через 10 секунд'));
+ */
+
+    let promise3 = doAfter(3);
+    promise3.then(() => console.log('я сработал через 3 секунд'));
+    promise3.then(() => console.log('и я тоже следом сработал через 3 секунд'));
+    promise3.then(() => console.log('и я'));
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
