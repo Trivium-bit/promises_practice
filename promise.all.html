@@ -1,0 +1,41 @@
+<script>
+    /* 
+        let doAfter = (sec) => {
+            let promise = new Promise((resolve) => {
+                setTimeout(() => {resolve()}, sec * 1000)
+            })
+            return promise
+        }
+    
+        let pr1 = doAfter(4); // один промис
+        let pr2 = doAfter(7); // второй промис
+        pr1.then(() => console.log("pr1 resolved")); // индивидуально подписываемся на каждый
+        
+        pr2.then(() => console.log("pr2 resolved"));
+    
+        let aggregatedPromise = Promise.all([pr1, pr2]); // получаем общий промис
+    
+        aggregatedPromise.then(() => console.log("pr1 and pr2 resolved"));
+     // сработает наш подписчик ТОЛЬКО когда все промисы, переданные в массиве в all будут resolved
+     */
+
+
+     //создайте функцию getRandomAfter, которая будет рандомно выдавать какое-то число через заданное кол-во секунд
+    let getRandomAfter = (sec) => {
+        let promise = new Promise((resolve) => {
+            let randomNumber = Math.random()
+            setTimeout(() => {resolve(randomNumber)}, sec * 1000)
+        })
+        return promise
+    }
+    getRandomAfter(4).then(number => console.log(`я получил ${number} спустя 4 секунды`))
+
+    // как вывести здесь все 3 числа используя Promise.all??
+  /*   let promises = [getRandomAfter(1), getRandomAfter(2), getRandomAfter(5)];
+    let commonPromise = Promise.all(promises);
+    commonPromise.then(res => {
+        console.log(res);
+    }) */
+
+
+</script>

@@ -1,0 +1,38 @@
+<script src="axios.js"></script>
+<script src="api.js"></script>
+
+<script>
+/*     api.sendStudentsCountToItKamasutra(10)
+        .then(res => {
+            let obj = res.data
+            console.log(obj);
+            return obj
+        })
+        .then(obj => {
+            let message = obj.message
+            console.log(message);
+        })
+
+    api.getVacanciesCountFromMicrosoft()
+        .then(res => {
+            let dat = res.data
+            console.log(dat);
+            return dat
+        })
+        .then(dat => {
+            let vacancies = dat.vacancies
+            console.log(vacancies);
+        }) */
+
+    api.getVacanciesCountFromGoogle()
+        .then(res => {
+            let dat = res.data
+            console.log(dat);
+            return dat
+        })
+        .then(dat => {
+            let vacancies = dat.vacancies
+            console.log(vacancies);
+        })
+
+</script>
